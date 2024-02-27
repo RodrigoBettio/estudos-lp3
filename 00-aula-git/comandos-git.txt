@@ -1,4 +1,12 @@
 git init - Inicializar um repositório 
 
+git clone - Faz o download de um repositório
+
+git status - Mostra o status daquele repositório
+
+git add <nome arquivo> - Adiciona o arquvio para o próximo commit
+
+git add . - Adicionatodos os arquivos (untracked and modified) para o próximo commit 
+
 git config -global user.email "rodriguinhobettiojr1@gmail.com"
 git config -global user.name "Rodrigo Bettio"
