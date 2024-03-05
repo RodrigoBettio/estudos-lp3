@@ -8,5 +8,7 @@ git add <nome arquivo> - Adiciona o arquvio para o próximo commit
 
 git add . - Adicionatodos os arquivos (untracked and modified) para o próximo commit 
 
-git config -global user.email "rodriguinhobettiojr1@gmail.com"
-git config -global user.name "Rodrigo Bettio"
+git config --global user.email "rodriguinhobettiojr1@gmail.com"
+git config --global user.name "Rodrigo Bettio"
+git config --global --unset-all user.email (ou mail
+git config --global --unset-all user.mail
