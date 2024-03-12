@@ -56,7 +56,7 @@ for habilidade in habilidades: #Utilizamos no singular normalmente
     print(habilidade)
 
 for habilidade in habilidades:
-    print(habilidade, sep='o' end=',') #sep é o que separa cada um dos valores end é como ele encerra. Na documentação do print, ele coloca end='/n'
+    print(habilidade, sep='o', end=',') #sep é o que separa cada um dos valores end é como ele encerra. Na documentação do print, ele coloca end='/n'
 
 #5. Tupla
 #Uma lista onde não podemos modificar nenhum item

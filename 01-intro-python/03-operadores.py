@@ -9,9 +9,9 @@ elevado_quadrado = numero ** 2 #Numero elevado ao quadrado
 # print(2+3) devolve um int
 # Os operadores lógicos devolvem um boolean
 
-print (TRUE and FALSE) # False
-print (TRUE or FALSE) #True
-print (TRUE not FALSE)#True
+print (True and False) # False
+print (True or False) #True
+print (False not False) #True
 
 #Operadores de Comparaçãoo
 # ==, !=, >, <, >=, <=
