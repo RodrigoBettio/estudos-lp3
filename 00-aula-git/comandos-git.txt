@@ -12,7 +12,8 @@ git config -l
 git config --global user.email "rodriguinhobettiojr1@gmail.com"
 git config --global user.name "Rodrigo Bettio"
 git config --global --unset-all user.email (ou mail)
-git config --global --unset-all user.mail
+git config --global --unset-all user.name
+
 
 git add .
 git commit -m "Mensagem pra branch"

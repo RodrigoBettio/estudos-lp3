@@ -41,3 +41,35 @@ if email == "rodriguinho@gmail.com" and senha =="123":
     print("Acesso Permitido")
 else:
     print ("Acesso negado")
+
+#Operador Ternário 
+idade = 20
+if idade >= 18:
+    status ="Maior de Idade"
+else:
+    status = "Menor de Idade" #Jeito errado 
+
+status= "Maior de Idade" if idade >= 18 else "Menor de Idade"
+
+#Match case
+
+dia = 3
+match dia:
+    case 1:
+        print ("Domingo")
+    case 2:
+        print ("Segunda")
+    case 3:
+        print ("Terça")
+    case 4:
+        print ("Quarta")
+    case _:
+        print ("Invalido")
+
+match dia:
+    case 1 | 7:
+        print("Final de Semana")
+    case 2 | 3 | 4 | 5 | 6:
+        print("Dias de semana")
+    case _:
+        print("Dia inválido")
