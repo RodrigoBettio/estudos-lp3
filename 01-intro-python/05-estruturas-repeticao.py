@@ -64,5 +64,5 @@ palavra = "Olá Rodriguinho"
 letras = [letra for letra in palavra]
 letras = [letra.upper() for letra in palavra] #Tudo em letra maiuscula. Podemos modificar as variaveis dentro da lista, essa manipulação é feita sempre antes do for
 
-numeros [1, 2, 4, 5, 6]
+numeros = [1, 2, 4, 5, 6]
 pares = [numero for numero in numeros if numero % 2 == 0]
