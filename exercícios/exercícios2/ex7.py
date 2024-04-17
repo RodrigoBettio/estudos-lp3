@@ -24,6 +24,8 @@ def forca():
         print("**Escreva em minusculo por favor")
         print("")
         print(f"Voce tem {chances} chances")
+        print(f"Essas letras já foram utilizadas: {letras_usuario}")
+        print("")
         tentativa = input("Tente adivinhar uma letra para a palavra:")
         letras_usuario.append(tentativa)
 
