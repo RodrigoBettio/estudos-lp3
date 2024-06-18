@@ -2,7 +2,7 @@
 name = "projeto-lp3"
 version = "0.1.0"
 description = ""
-authors = ["Rodrigo Bettio <rodriguinhobettiojr1@gmail.com>"]
+authors = ["Letícia Rudeli <leticiarudeli11@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]

@@ -1,19 +1,32 @@
-from flask import Flask
+from flask import Flask, render_template
 
-app = Flask("Minha Aplicação")
+app = Flask(__name__)
 
-#Página home - home - /
-#@ É o decorator
-@app.route("/") #Define a rota / como identificador da def home
+# rota + função
+
+# / - home page
+@app.route("/")
+
 def home():
-    return "<h1> Home Page </h1>"
+    return render_template ("home.html")
 
-#Página contato - /contato (Rotas)
+
+# /contato - pagina de contato 
 @app.route("/contato")
-def contato():
-    return "<h1> Contato </h1>"
 
-#Página produtos - /produtos (Rotas)
+def contato():
+    return render_template ("contato.html")
+
+
+# /produtos - pagina produtos 
 @app.route("/produtos")
+
 def produtos():
-    return "<h1> Produtos </h1>"
+
+    lista_produtos = [
+        {"nome": "coquinha bb", "desc": "ruim"},
+        {"nome": "doritos", "desc": "suja a mao"},
+        {"nome": "sneakers", "desc": "meu choc preferido"}
+    ]
+
+    return render_template ("produtos.html", produtos=lista_produtos)
