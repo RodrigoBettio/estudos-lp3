@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
@@ -12,6 +13,8 @@
         <a href="/"> Home Page </a>
         <a href="/contato"> Contato </a>
         <a href="/produtos"> Produtos </a>
+        <a href="/cpf">CPF</a>
+        <a href="/cnpj">CNPJ</a>
     </nav>
 
     {% block content %} {% endblock %}

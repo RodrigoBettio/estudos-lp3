@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/contato">Contato</a>
+            <a href="/produtos">Produtos</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class ="titulo" ></div>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Rodriguinho, 2024.</p>
+        <p><a href="">Termos de uso</a> | <a href="">Política de privacidade</a>  | <a href=""> Como Utilizar</a></p> 
+    </footer>
+</body>
+</html>

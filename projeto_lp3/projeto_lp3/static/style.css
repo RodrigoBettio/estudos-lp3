@@ -1,0 +1,9 @@
+nav{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
