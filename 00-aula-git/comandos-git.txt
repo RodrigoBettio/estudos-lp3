@@ -24,3 +24,5 @@ git commit -m "Mensagem pra branch"
 2- Apagar o diretorio caso já exista rm -rf estudos-lp3
 3- Clonar o seu repositório
 4- Abrir no VSCode: code estudos-lp3
+
+

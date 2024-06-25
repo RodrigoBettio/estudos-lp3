@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from validate_docbr import CPF, CNPJ
 
 
@@ -17,18 +17,20 @@ def home():
 def contato():
     return render_template ("contato.html")
 
-
-# /produtos - pagina produtos 
-@app.route("/produtos")
-def produtos():
-
-    lista_produtos = [
+lista_produtos = [
         {"nome": "Coquinha", "desc": "Suco é melhor"},
         {"nome": "Doritos", "desc": "Suja a mao"},
         {"nome": "Sneakers", "desc": "Eca"}
     ]
-
+# /produtos - pagina produtos 
+@app.route("/produtos")
+def produtos():
     return render_template ("produtos.html", produtos=lista_produtos)
+
+@app.route("/cadastro")
+def cadastro_produtos():
+    print(lista_produtos)
+    return render_template("cadastro_produto.html")
 
 @app.route("/cnpj")
 def cnpj():
@@ -41,5 +43,19 @@ def cpf():
     cpf = CPF()
     cpf_gerado = cpf.generate(True)  # Gera CPF com máscara
     return render_template("cpf.html", cpf = cpf_gerado)
+
+#Get para obter o formulário 
+@app.route("/produtos/cadastro")
+def cadastro_produto():
+    return render_template(cadastro_produto.html)
+
+@app.route("/produtos", methods=['POST'])
+def salvar_produto():
+    nome = request.form['nome'] 
+    descricao = request.form['descricao']
+    produto = {"nome": nome, "descricao": descricao}
+    lista_produtos.append(produto)
+
+    return render_template("produtos.html", produtos = lista_produtos)
 
 app.run(debug=True)
