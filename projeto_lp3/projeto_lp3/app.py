@@ -47,7 +47,7 @@ def cpf():
 #Get para obter o formulário 
 @app.route("/produtos/cadastro")
 def cadastro_produto():
-    return render_template(cadastro_produto.html)
+    return render_template("cadastro_produto.html")
 
 @app.route("/produtos", methods=['POST'])
 def salvar_produto():
@@ -57,5 +57,17 @@ def salvar_produto():
     lista_produtos.append(produto)
 
     return render_template("produtos.html", produtos = lista_produtos)
+
+@app.route("/termos")
+def termos():
+    return render_template("termos.html")
+
+@app.route("/politica")
+def politica():
+    return render_template("politica.html")
+
+@app.route("/comousar")
+def como_usar():
+    return render_template("como_usar.html")
 
 app.run(debug=True)
