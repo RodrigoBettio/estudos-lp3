@@ -7,6 +7,9 @@
 #Quantidade de filtragem no mínimo 2 a 3x o volume do aquário
 
 def menu():
+    comprimento, altura, largura = infos()
+    volume = calc_vol(comprimento, altura, largura)
+
     while True:
         print("----- AQUÁRIO -----")
         print("Digite o número da opção desejada")
@@ -16,11 +19,9 @@ def menu():
         print("4. Sair") 
         print("-------------------")
 
-        opc = int(input(""))
+        opc = int(input("").strip())
         match opc:
             case 1:
-                comprimento, altura, largura = infos()
-                volume = calc_vol(comprimento, altura, largura)
                 print(f"O volume do seu aquário é de {volume}litros")
             case 2:
                 potencia(volume)
@@ -49,9 +50,9 @@ def potencia(volume):
         menu()
     else: 
         temp_desejada = float(input("Qual é a temperatura desejada para o aquário (Apenas o número)\n"))
-        temp_ambiente = float(input("Qual é a temperatura atual do ambiente?"))
+        temp_ambiente = float(input("Qual é a temperatura atual do ambiente?\n"))
         potencia = volume*0.05*(temp_desejada - temp_ambiente)
-        print(f"A potência do seu termostato deve ser de: {potencia}")
+        print(f"A potência do seu termostato deve ser de: {potencia:.2f}")
 
 def filtragem(volume):
     if volume <= 0:
@@ -59,7 +60,7 @@ def filtragem(volume):
         menu()
     else:
         filtragem = volume*3 
-        print(f"Deve-se filtrar o filtro {filtragem} por hora")
+        print(f"Deve-se filtrar o aquário {filtragem:.2f} por hora")
 
 
 menu()
