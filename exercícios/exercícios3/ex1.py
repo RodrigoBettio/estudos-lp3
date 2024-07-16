@@ -62,5 +62,4 @@ def filtragem(volume):
         filtragem = volume*3 
         print(f"Deve-se filtrar o aquário {filtragem:.2f} por hora")
 
-
 menu()

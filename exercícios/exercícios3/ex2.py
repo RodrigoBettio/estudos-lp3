@@ -23,13 +23,13 @@ def menu():
                 print("Digite uma opção válida. Tente Novamente.\n")
 
 def calc_imc():
-    altura = float(input("Qual é a sua altura?"))
-    peso = float(input("Qual é o seu peso?"))
-    if peso and altura > 0:
+    altura = float(input("Qual é a sua altura? (Em metros)"))
+    peso = float(input("Qual é o seu peso? (Em Kg)"))
+    if peso > 0 and altura > 0:
         imc = peso/(altura*altura)
     else: 
         "Digite seus dados corretamente"
-        calc_imc()
+        menu()
     return peso, altura, imc
 
 def classificacao(imc):
@@ -53,7 +53,7 @@ def calc_ganho_perda(peso, altura, imc):
         peso_ganhar = peso_ideal_min - peso
         print(f"Você precisa ganhar {peso_ganhar:.2f}kg para atingir o peso ideal")
     elif imc >= 24.9: 
-        peso_perder = peso_ideal_max - peso
+        peso_perder = peso - peso_ideal_max
         print(f"Você precisa perder {peso_perder:.2f}kg para atingir o peso ideal")
     else:
         print("")
